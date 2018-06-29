@@ -16,15 +16,15 @@ int main(int argc, char *argv[]) {
 	if ((file_in = fopen(argv[1], "rb")) != NULL) {
 		printf ("Type your arr:\n");
 		scanf ("%s", arr);
-		printf ("%s\n%s\n%s\n", argv[0], argv[1], arr); // DEBUG
+		//printf ("%s\n%s\n%s\n", argv[0], argv[1], arr); // DEBUG
 		
 		for (i = 0, ptr = arr; *ptr != '\0'; ptr++, i++) {
-			printf ("times: %d\n", i); // DEBUG
+			//printf ("times: %d\n", i); // DEBUG
 			y = 1/(double)*ptr;
-			printf ("y: %lf\n", y); // DEBUG
-			for (j = i+3; j >= 0; j--) {
+			//printf ("y: %lf\n", y); // DEBUG
+			for (j = i+30; j >= 0; j--) {
 				y *= 4 - 4*y;
-				printf ("-y: %lf\n", y); // DEBUG
+				//printf ("-y: %lf\n", y); // DEBUG
 			}
 			x = (x+y) / 2;
 		}
@@ -51,6 +51,6 @@ int main(int argc, char *argv[]) {
 		fclose(file_in);
 	}
 	
-	scanf ("%s", arr); // DEBUG
+	//scanf ("%s", arr); // DEBUG
 	return 0;
 }
