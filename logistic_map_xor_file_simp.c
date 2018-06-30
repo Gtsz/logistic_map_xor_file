@@ -1,9 +1,8 @@
+// A simple program for file encryption
 #include <stdio.h>
 
 #define BUF_LEN 4096
-#define MAX_ARR_LEN 2048
 #define SKIP_N 30 // It's a key value
-#define EXT_NAME ".lmx"
 
 int main(int argc, char *argv[]) {
   unsigned char buffer[BUF_LEN];
@@ -12,9 +11,9 @@ int main(int argc, char *argv[]) {
   int i, j;
   double x = 0.2, y;
   
-  if (argv[3] != NULL)
-  if ((file_out = fopen(argv[2], "wb")) != NULL)
-  if ((file_in = fopen(argv[1], "rb")) != NULL) {
+  if (argv[3]) // Key string
+  if (file_out = fopen(argv[2], "wb"))
+  if (file_in = fopen(argv[1], "rb")) {
     // Initializing
     for (i = 0, ptr = argv[3]; *ptr; ptr++, i++) {
       y = 1/(double)*ptr;
@@ -40,6 +39,5 @@ int main(int argc, char *argv[]) {
   }
   
   printf("parameter missing, args: <path_in> <path_out> <key>\n");
-  //scanf ("%s", arr); // DEBUG
   return 0;
 }
