@@ -38,5 +38,5 @@ int main(int argc, char *argv[]) {
   }
   
   printf("Parameter(s) missing, args: <path_in> <path_out> <key>\n");
-  return 0;
+  return -1;
 }
