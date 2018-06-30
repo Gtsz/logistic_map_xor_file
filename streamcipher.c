@@ -33,7 +33,7 @@ int main(int argc, char *argv[]) {
     }
     fclose(file_in);
     fclose(file_out);
-    printf("Process finished!");
+    printf("Process finished!\n");
 	return 0;
   }
   
