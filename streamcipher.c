@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 #define BUF_LEN 4096
-#define SKIP_N 30 // incompatible if this value changes
+#define SKIP_N 30 // Incompatible if this value changes
 
 int main(int argc, char *argv[]) {
   FILE *file_in, *file_out;
@@ -37,6 +37,6 @@ int main(int argc, char *argv[]) {
 	return 0;
   }
   
-  printf("parameter missing, args: <path_in> <path_out> <key>\n");
+  printf("Parameter(s) missing, args: <path_in> <path_out> <key>\n");
   return 0;
 }
