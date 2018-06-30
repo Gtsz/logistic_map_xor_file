@@ -27,7 +27,7 @@ int main(int argc, char *argv[]) {
       //printf ("%s", buffer); // DEBUG
       for (j = 0; j < BUF_LEN; j++) {
         x *= 4 - 4*x; // Logistic Map
-        buffer[j] ^= *((unsigned char*)&x+7); // XOR
+        buffer[j] ^= *((unsigned char*)&x+3); // XOR
       }
       fwrite(buffer, 1, i, file_out);
     }

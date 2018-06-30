@@ -41,7 +41,7 @@ int main(int argc, char *argv[]) {
       //printf ("%s", buffer); // DEBUG
       for (i = 0; i < BUF_LEN; i++) {
         x *= 4 - 4*x; // Chaos
-        buffer[i] ^= *((unsigned char*)&x+7); // bits from 57th to 64th
+        buffer[i] ^= *((unsigned char*)&x+3); // used to be 7 but err
       }
       fwrite(buffer, 1, j, file_out);
     }
